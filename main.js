@@ -12,6 +12,11 @@ let json = $.getJSON("text.json", function(json){
 
 });
 
+$.getJSON('https://api.ipify.org?format=json', function(data) {
+  console.log(JSON.stringify(data, null, 2));
+});
+
+
 let underscoreArray = [2,'0', 4, 6, null, [], 8, 10];
 
 var sum = _.reduce(underscoreArray, function (memoizer, number) {
